@@ -3,7 +3,7 @@
 name: Fx.Tween Specs
 description: n/a
 requires: [Core/Fx.Tween]
-provides: [Fx.Tween.Specs]
+provides: [1.3client.Fx.Tween.Specs]
 ...
 */
 describe('Fx.Tween', function(){
@@ -19,7 +19,7 @@ describe('Fx.Tween', function(){
 
 	it('should tween the style of an element', function(){
 
-		var element = new Element('div', {
+		var element = new Element('div#st_el', {
 			styles: {
 				height: 100
 			}
@@ -34,7 +34,7 @@ describe('Fx.Tween', function(){
 
 		this.clock.tick(200);
 
-		expect(element.offsetHeight).toEqual(50);
+		expect(element.getStyle('height').toInt()).toEqual(50);
 		element.destroy();
 
 	});
@@ -43,7 +43,7 @@ describe('Fx.Tween', function(){
 
 		var element = new Element('div', {
 			styles: {
-				height: 100
+				width: 100
 			},
 			tween: {
 				duration: 100

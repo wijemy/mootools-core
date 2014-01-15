@@ -3,7 +3,7 @@
 name: Element Specs
 description: n/a
 requires: [Core/Element.Style]
-provides: [Element.Style.Specs]
+provides: [1.4client.Element.Style.Specs]
 ...
 */
 describe('Element.Style', function(){
@@ -175,7 +175,7 @@ describe('Element.Style', function(){
 
 	describe('set/getStyle background-size', function(){
 
-		it('should return the correct pixel size', function(){
+		xit('should return the correct pixel size', function(){
 			var foo = new Element('div', {
 				styles: {
 					backgroundSize: '44px'
